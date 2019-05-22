@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameStateController">
+   <children>
+      <Pane layoutX="7.0" layoutY="7.0" prefHeight="564.0" prefWidth="622.0">
+         <children>
+            <TableView fx:id="table1" layoutX="8.0" layoutY="117.0" prefHeight="315.0" prefWidth="606.0">
+              <columns>
+                <TableColumn fx:id="locations" prefWidth="108.0" text="Location" />
+                  <TableColumn fx:id="cards" prefWidth="497.0" text="Known Cards" />
+              </columns>
+            </TableView>
+            <Label contentDisplay="CENTER" layoutX="212.0" layoutY="60.0" text="Current Game State">
+               <font>
+                  <Font name="SimSun" size="22.0" />
+               </font>
+            </Label>
+            <Button layoutX="262.0" layoutY="480.0" mnemonicParsing="false" onAction="#goToHomeScene" text="Return Home" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
