@@ -11,11 +11,25 @@
    <children>
       <Pane layoutX="-18.0" layoutY="-8.0" prefHeight="447.0" prefWidth="524.0">
          <children>
-            <VBox alignment="CENTER" layoutX="110.0" layoutY="108.0" prefHeight="200.0" prefWidth="304.0" spacing="10.0">
+            <VBox alignment="CENTER" layoutX="110.0" layoutY="50.0" prefHeight="66.0" prefWidth="304.0" spacing="10.0">
                <children>
                   <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="177.0" text="Enter Number of Players" textAlignment="CENTER" />
                   <TextField fx:id="input1" />
-                  <Button fx:id="button1" mnemonicParsing="false" onAction="#createGame" text="Start" />
+               </children>
+            </VBox>
+            <Button fx:id="button1" layoutX="238.0" layoutY="350.0" mnemonicParsing="false" onAction="#createGame" text="Start" />
+            <VBox alignment="CENTER" layoutX="110.0" layoutY="136.0" prefHeight="66.0" prefWidth="304.0" spacing="10.0">
+               <children>
+                  <Label fx:id="label11" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="177.0" text="Enter Path to WCSP Binary" textAlignment="CENTER" />
+                  <Label fx:id="label1211" alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="249.0" text="i.e: /User/Project1/wcsp" textAlignment="CENTER" />
+                  <TextField fx:id="binary_path" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="110.0" layoutY="236.0" prefHeight="66.0" prefWidth="304.0" spacing="10.0">
+               <children>
+                  <Label fx:id="label12" alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="249.0" text="Enter Path to Top-K Solutions main.py" textAlignment="CENTER" />
+                  <Label fx:id="label121" alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="249.0" text="i.e: /User/Project1/main.py" textAlignment="CENTER" />
+                  <TextField fx:id="main_path" />
                </children>
             </VBox>
          </children>

@@ -17,8 +17,13 @@ import javafx.stage.Stage;
 public class StartController {
 	
 	private ClueSolver game;
+	private PathInfo paths;
 
 	@FXML private TextField input1;
+	
+	@FXML private TextField main_path;
+	
+	@FXML private TextField binary_path;
 	
 	@FXML private Label label1;
 	
@@ -28,12 +33,14 @@ public class StartController {
         int numberPlayers = Integer.valueOf(input1.getText());
         game = new ClueSolver(numberPlayers);
         game.startGame();
+        paths = new PathInfo(binary_path.getText(), main_path.getText());
+        
         //input1.setText(String.valueOf(game.getNumberPlaces()));
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Home.fxml"));        
         Parent homeParent = loader.load();
         HomeController controller = loader.getController();
-        controller.initData(game);
+        controller.initData(game, paths);
         
         Scene homeScene = new Scene(homeParent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

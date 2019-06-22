@@ -23,6 +23,7 @@ import javafx.stage.Stage;
 
 public class GameStateController {
 	private ClueSolver game;
+	private PathInfo paths;
 	private ObservableList<LocationData> tableData = FXCollections.observableArrayList();
 
 	@FXML private TableView<LocationData> table1;
@@ -30,8 +31,9 @@ public class GameStateController {
 	@FXML private TableColumn<LocationData, String> cards;
 	@FXML private TableColumn<LocationData, String> locations;
 	
-	public void initData(ClueSolver game) {
+	public void initData(ClueSolver game, PathInfo paths) {
 		this.game = game;
+		this.paths = paths;
 		List<HashSet<Integer>> playerHands = game.getHands();
 		for (int i = 0; i < playerHands.size(); i++) {
 			String location = "Player " + Integer.toString(i+1);
@@ -50,7 +52,7 @@ public class GameStateController {
         loader.setLocation(getClass().getResource("Home.fxml"));        
         Parent homeParent = loader.load();
         HomeController controller = loader.getController();
-        controller.initData(game);
+        controller.initData(game, paths);
         
         Scene homeScene = new Scene(homeParent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
