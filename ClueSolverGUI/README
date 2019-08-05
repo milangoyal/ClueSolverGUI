@@ -1,0 +1,12 @@
+This Java program contains the graphic user interface for the ClueSolver program. More information can be found on the ClueSolver
+GitHub: https://github.com/milangoyal/ClueSolver
+
+1. Compile WCSPLift (The README file contains instructions). GitHub: https://gitlab.com/xuphys/wcsp-solver
+
+2. Copy the Top K Solutions Generator repository. GitHub: https://gitlab.com/kianasun/top-k-wcsp-solutions
+This step is optional but necessary if you would like to output the top K solutions to the Clue game rather
+than just the top solution.
+
+3. Export this repository as a runnable JAR (Main is in Main.java). Run the JAR and input the absolute file path
+to the WCSPLift Binary executable as well as the file path for the main.py of the top K solutions generator. Skipping
+either of these step will not result in an error but you will not have access to the corresponding functionality.

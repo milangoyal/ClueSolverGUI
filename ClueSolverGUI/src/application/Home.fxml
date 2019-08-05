@@ -13,7 +13,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
    <children>
-      <Pane layoutX="-8.0" layoutY="-3.0" prefHeight="517.0" prefWidth="652.0">
+      <Pane layoutX="-8.0" prefHeight="532.0" prefWidth="800.0">
          <children>
             <ButtonBar layoutX="160.0" layoutY="410.0" prefHeight="27.0" prefWidth="315.0">
               <buttons>
@@ -21,16 +21,16 @@
                 <Button fx:id="solutionButton" mnemonicParsing="false" onAction="#goToGameSolutionScene" text="View Game Solution" />
               </buttons>
             </ButtonBar>
-            <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="14.0" prefHeight="17.0" prefWidth="271.0" text="Enter the number of turns to simulate" />
-            <Button fx:id="suggestButton" layoutX="498.0" layoutY="39.0" mnemonicParsing="false" onAction="#suggest" text="Suggest" />
-            <TextArea fx:id="textArea" layoutX="12.0" layoutY="79.0" prefHeight="318.0" prefWidth="636.0" />
+            <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="83.0" layoutY="6.0" prefHeight="17.0" prefWidth="495.0" text="After making a suggestion, you may end your turn or make a final accusation." />
+            <Button fx:id="suggestButton" layoutX="497.0" layoutY="26.0" mnemonicParsing="false" onAction="#suggest" prefHeight="27.0" prefWidth="76.0" text="Suggest" />
+            <TextArea fx:id="textArea" layoutX="12.0" layoutY="79.0" prefHeight="318.0" prefWidth="781.0" />
             <HBox alignment="CENTER" layoutX="101.0" layoutY="446.0" prefHeight="35.0" prefWidth="280.0" spacing="10.0">
                <children>
                   <Label prefHeight="35.0" prefWidth="240.0" text="Number of Alternative Solutions:" />
                   <Spinner fx:id="spinner1" prefHeight="27.0" prefWidth="110.0" />
                </children>
             </HBox>
-            <VBox layoutX="396.0" layoutY="449.0" prefHeight="64.0" prefWidth="114.0" spacing="10.0">
+            <VBox layoutX="396.0" layoutY="441.0" prefHeight="58.0" prefWidth="114.0" spacing="2.0">
                <children>
                   <Button fx:id="writeButton" minWidth="0.0" mnemonicParsing="false" onAction="#writeToFile" prefHeight="27.0" prefWidth="175.0" text="Write to File" />
                   <Button fx:id="readButton" mnemonicParsing="false" onAction="#readFromFile" prefHeight="27.0" prefWidth="137.0" text="Read from File" />
@@ -39,7 +39,9 @@
             <ChoiceBox fx:id="suspectChoice" layoutX="26.0" layoutY="39.0" prefWidth="150.0" />
             <ChoiceBox fx:id="placeChoice" layoutX="182.0" layoutY="39.0" prefWidth="150.0" />
             <ChoiceBox fx:id="weaponChoice" layoutX="339.0" layoutY="39.0" prefWidth="150.0" />
-            <Button fx:id="accuseButton" layoutX="574.0" layoutY="39.0" mnemonicParsing="false" onAction="#accuse" text="Accuse" textFill="RED" />
+            <Button fx:id="accuseButton" layoutX="584.0" layoutY="39.0" mnemonicParsing="false" onAction="#accuse" text="Accuse" textFill="RED" />
+            <Button fx:id="endTurnButton" layoutX="497.0" layoutY="53.0" mnemonicParsing="false" onAction="#endTurn" prefHeight="27.0" prefWidth="76.0" text="End Turn" />
+            <Label fx:id="label11" alignment="CENTER" contentDisplay="CENTER" layoutX="365.0" layoutY="499.0" prefHeight="17.0" prefWidth="176.0" text="Write to file before reading." />
          </children>
       </Pane>
    </children>

@@ -3,7 +3,6 @@ package application;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -28,7 +27,6 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class HomeController {
@@ -56,12 +54,7 @@ public class HomeController {
 	
 	
 	@FXML private TextArea textArea;
-	
-	@FXML protected void simulate(ActionEvent event){
-        int numberTurns = Integer.valueOf(turnsInput.getText());
-        String message = game.simulateTurns(numberTurns);
-        textArea.setText(message);
-    }
+
 	
 	@FXML protected void suggest(ActionEvent event) {
 		String suspectName = suspectChoice.getValue();
@@ -84,11 +77,20 @@ public class HomeController {
 		}
 		
 		if (suspect != -1 && place != -1 && weapon != -1) {
-			game.enterPlayerTurn(suspect, place, weapon);
-			game.simulateOpenentTurns();
+			game.enterPlayer1Turn(suspect, place, weapon);
 			textArea.setText(game.getGameMessages());
+			//Makes text area to scroll to updated bottom
+			textArea.appendText("");
 		}
 		
+	}
+	
+	@FXML protected void endTurn(ActionEvent event) {
+		game.endPlayer1Turn();
+		game.simulateOpenentTurns();
+		textArea.setText(game.getGameMessages());
+		//Makes text area to scroll to updated bottom
+		textArea.appendText("");
 	}
 	
 	@FXML protected void accuse(ActionEvent event) {
@@ -112,7 +114,10 @@ public class HomeController {
 		}
 		
 		if (suspect != -1 && place != -1 && weapon != -1) {
-			textArea.setText(game.accuse(suspect, place, weapon));
+			game.accuse(suspect, place, weapon);
+			textArea.setText(game.getGameMessages());
+			//Makes text area to scroll to updated bottom
+			textArea.appendText("");
 		}
 	}
 	
@@ -137,6 +142,7 @@ public class HomeController {
 		
 		
 		textArea.setText(game.getGameMessages());
+		textArea.appendText("");
 	}
 	
 	@FXML private void initialize() {
@@ -187,7 +193,9 @@ public class HomeController {
 				output += line;
 			}
 			in.close();
-			textArea.setText(output);
+			textArea.setText(game.getGameMessages());
+			//Makes text area to scroll to updated bottom
+			textArea.appendText(output);
 		} catch (Exception e) {
 			textArea.setText(e.getMessage());
 			return;
@@ -236,33 +244,6 @@ public class HomeController {
 			textArea.setText(e.getMessage());
 			return;
 		}
-		
-
-
-		/*
-		 * OLD CODE for top solution only
-		 */
-//		String line="";
-//		while (!line.contains("ID")) {
-//			line = reader.readLine();
-//		}
-//		int numberOfLines = (game.getNumberPlayers()+3)*21;
-//		List<HashSet<Integer>> solutionData = new ArrayList<HashSet<Integer>>();
-//		for (int i = 0; i < (game.getNumberPlayers()+3); i++) {
-//			solutionData.add(new HashSet<Integer>());
-//		}
-//		
-//		for (int i = 0; i < numberOfLines; i++) {
-//			line = reader.readLine();
-//			String[] splitLine = line.split("\\s+");
-//			if (splitLine[1].equals("1")) {
-//				int varNumber = Integer.parseInt(splitLine[0]);
-//				int cardNumber = varNumber / (game.getNumberPlayers()+3);
-//				int location = varNumber - cardNumber*(game.getNumberPlayers()+3);
-//				solutionData.get(location).add(cardNumber);
-//			}
-//		}
-
 		
 		
         FXMLLoader loader = new FXMLLoader();

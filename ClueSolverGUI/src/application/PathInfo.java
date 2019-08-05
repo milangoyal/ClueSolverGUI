@@ -1,5 +1,11 @@
 package application;
 
+/**
+ * Holds absolute path information for WCSP Lyft executable and 
+ * top-k-solutions python script
+ * @author Milan
+ *
+ */
 public class PathInfo {
 	//Path to wcsp executable
 	public String wcsp;

@@ -5,6 +5,12 @@ import java.util.Iterator;
 
 import clue.ClueSolver;
 
+/**
+ * Class used to format table data showing location of each card in {@link GameSolutionController}
+ * and {@link GameStateController}.
+ * @author Milan
+ *
+ */
 public class LocationData {
 	public String location;
 	public String cards;
