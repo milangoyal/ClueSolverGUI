@@ -1,6 +1,8 @@
 This Java program contains the graphic user interface for the ClueSolver program. More information can be found on the ClueSolver
 GitHub: https://github.com/milangoyal/ClueSolver
 
+Requires ClueSolver jar which is already included in repository under lib.
+
 1. Compile WCSPLift (The README file contains instructions). GitHub: https://gitlab.com/xuphys/wcsp-solver
 
 2. Copy the Top K Solutions Generator repository. GitHub: https://gitlab.com/kianasun/top-k-wcsp-solutions
