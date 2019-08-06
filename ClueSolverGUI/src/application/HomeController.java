@@ -149,6 +149,13 @@ public class HomeController {
 		spinner1.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1));
 	}
 	
+	@FXML protected void startNewGame(ActionEvent event) {
+		this.game = new ClueSolver(game.getNumberPlayers());
+		this.game.startGame();
+		textArea.setText(game.getGameMessages());
+		textArea.appendText("");
+	}
+	
 	@FXML protected void goToGameStateScene(ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("GameState.fxml"));        
@@ -200,9 +207,6 @@ public class HomeController {
 			textArea.setText(e.getMessage());
 			return;
 		}
-
-		//System.out.println(output);
-		//textArea.setText("WCSP input data written to file called 'ClueSolverInput'");
 	}
 	
 	@FXML protected void readFromFile(ActionEvent event) {

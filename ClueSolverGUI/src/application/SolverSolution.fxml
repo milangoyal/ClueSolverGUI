@@ -7,31 +7,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SolverSolutionController">
+<AnchorPane prefHeight="571.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SolverSolutionController">
    <children>
-      <Pane layoutX="7.0" layoutY="7.0" prefHeight="564.0" prefWidth="622.0">
+      <Pane prefHeight="571.0" prefWidth="750.0">
          <children>
-            <TableView fx:id="table1" layoutX="8.0" layoutY="117.0" prefHeight="315.0" prefWidth="606.0">
+            <TableView fx:id="table1" layoutX="8.0" layoutY="117.0" prefHeight="356.0" prefWidth="731.0">
               <columns>
-                <TableColumn fx:id="locations" prefWidth="108.0" text="Location" />
-                  <TableColumn fx:id="cards" prefWidth="497.0" text="Known Cards" />
+                <TableColumn fx:id="locations" prefWidth="124.0" text="Location" />
+                  <TableColumn fx:id="cards" prefWidth="481.0" text="Known Cards" />
               </columns>
             </TableView>
-            <Label alignment="CENTER" layoutX="207.0" layoutY="14.0" prefHeight="17.0" prefWidth="218.0" text="Solver Solution">
-               <font>
-                  <Font name="Copperplate" size="25.0" />
-               </font>
-            </Label>
-            <Button fx:id="homeButton" layoutX="262.0" layoutY="487.0" mnemonicParsing="false" onAction="#goToHomeScene" text="Return Home" />
-            <HBox alignment="CENTER" layoutX="200.0" layoutY="62.0" prefHeight="27.0" prefWidth="232.0" spacing="25.0">
+            <Button fx:id="homeButton" layoutX="324.0" layoutY="500.0" mnemonicParsing="false" onAction="#goToHomeScene" text="Return Home" />
+            <VBox alignment="CENTER" layoutX="212.0" layoutY="21.0" prefHeight="84.0" prefWidth="324.0" spacing="10.0">
                <children>
-                  <Button fx:id="prev_button" mnemonicParsing="false" onAction="#prevButtonClick" prefHeight="27.0" prefWidth="65.0" text="Prev" />
-                  <Label fx:id="label1" alignment="CENTER" prefHeight="17.0" prefWidth="62.0" text="Label" />
-                  <Button fx:id="next_button" mnemonicParsing="false" onAction="#nextButtonClick" prefHeight="27.0" prefWidth="69.0" text="Next" />
+                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="261.0" text="Solver Solution">
+                     <font>
+                        <Font name="Copperplate" size="25.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="27.0" prefWidth="232.0" spacing="25.0">
+                     <children>
+                        <Button fx:id="prev_button" mnemonicParsing="false" onAction="#prevButtonClick" prefHeight="27.0" prefWidth="80.0" text="Prev" />
+                        <Label fx:id="label1" alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Label" />
+                        <Button fx:id="next_button" mnemonicParsing="false" onAction="#nextButtonClick" prefHeight="27.0" prefWidth="80.0" text="Next" />
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
+            </VBox>
          </children>
       </Pane>
    </children>

@@ -35,7 +35,6 @@ public class StartController {
         game.startGame();
         paths = new PathInfo(binary_path.getText(), main_path.getText());
         
-        //input1.setText(String.valueOf(game.getNumberPlaces()));
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("Home.fxml"));        
         Parent homeParent = loader.load();
