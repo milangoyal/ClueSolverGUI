@@ -17,11 +17,11 @@
             <TableView fx:id="table1" layoutX="8.0" layoutY="117.0" prefHeight="356.0" prefWidth="731.0">
               <columns>
                 <TableColumn fx:id="locations" prefWidth="124.0" text="Location" />
-                  <TableColumn fx:id="cards" prefWidth="481.0" text="Known Cards" />
+                  <TableColumn fx:id="cards" prefWidth="605.0" text="Known Cards" />
               </columns>
             </TableView>
             <Button fx:id="homeButton" layoutX="324.0" layoutY="500.0" mnemonicParsing="false" onAction="#goToHomeScene" text="Return Home" />
-            <VBox alignment="CENTER" layoutX="212.0" layoutY="21.0" prefHeight="84.0" prefWidth="324.0" spacing="10.0">
+            <VBox alignment="CENTER" layoutX="56.0" layoutY="22.0" prefHeight="84.0" prefWidth="638.0" spacing="10.0">
                <children>
                   <Label alignment="CENTER" prefHeight="25.0" prefWidth="261.0" text="Solver Solution">
                      <font>
@@ -31,7 +31,7 @@
                   <HBox alignment="CENTER" prefHeight="27.0" prefWidth="232.0" spacing="25.0">
                      <children>
                         <Button fx:id="prev_button" mnemonicParsing="false" onAction="#prevButtonClick" prefHeight="27.0" prefWidth="80.0" text="Prev" />
-                        <Label fx:id="label1" alignment="CENTER" prefHeight="17.0" prefWidth="111.0" text="Label" />
+                        <Label fx:id="label1" alignment="CENTER" prefHeight="17.0" prefWidth="305.0" text="Label" />
                         <Button fx:id="next_button" mnemonicParsing="false" onAction="#nextButtonClick" prefHeight="27.0" prefWidth="80.0" text="Next" />
                      </children>
                   </HBox>

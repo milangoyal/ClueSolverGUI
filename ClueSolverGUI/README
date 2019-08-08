@@ -12,3 +12,8 @@ than just the top solution.
 3. Export this repository as a runnable JAR (Main is in Main.java). Run the JAR and input the absolute file path
 to the WCSPLift Binary executable as well as the file path for the main.py of the top K solutions generator. Skipping
 either of these step will not result in an error but you will not have access to the corresponding functionality.
+
+NOTE: Running the script to produce alternative solutions may take several seconds, especially when a large number of
+alternative solutions are selected or there are a very large number of players. During this time, the program will appear
+frozen, but just let finish executing the necessary Python script (the program will automatically kill the attempt if 
+it takes longer than a certain threshold). The solver works best for up to 5 players and 3 or less alternative solutions. 

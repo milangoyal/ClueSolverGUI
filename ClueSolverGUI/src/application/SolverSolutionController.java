@@ -35,7 +35,7 @@ public class SolverSolutionController {
 		this.game = game;
 		this.paths = paths;
 		this.k_solution = 0;
-		label1.setText("Solution Number " + k_solution);
+		label1.setText("Solution Number " + (k_solution+1));
 		this.solverSolution = solverSolution;
 		for (int i = 0; i < solverSolution.get(0).size(); i++) {
 			String location;

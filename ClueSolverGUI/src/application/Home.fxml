@@ -47,7 +47,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="83.0" prefWidth="321.0" spacing="10.0">
                            <children>
-                              <Label prefHeight="35.0" prefWidth="220.0" text="Number of Alternative Solutions:" />
+                              <Label alignment="CENTER" prefHeight="35.0" prefWidth="220.0" text="Alternative Solutions:" />
                               <Spinner fx:id="spinner1" prefHeight="27.0" prefWidth="110.0" />
                            </children>
                         </HBox>
